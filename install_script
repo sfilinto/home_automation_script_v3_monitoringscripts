@@ -1,0 +1,30 @@
+#!/bin/bash
+set -v
+
+# git clone https://github.com/sfilinto/home_automation_script_v3_monitoringscripts.git
+# cd home_automation_script_v3_monitoringscripts
+# chmod a+x install_script
+# sudo ./install_script
+
+sudo mkdir /usr/local/bin/ipmonitor
+sudo cp monitorip.sh /usr/local/bin/ipmonitor/
+
+sudo cp action_16up /usr/local/bin/ipmonitor/
+sudo cp action_17up /usr/local/bin/ipmonitor/
+sudo cp action_21up /usr/local/bin/ipmonitor/
+sudo cp Sachin.mp3 /usr/local/bin/ipmonitor/
+#sudo cp xxx.mp3 /usr/local/bin/ipmonitor/
+sudo cp intruder.mp3 /usr/local/bin/ipmonitor/
+
+cd /usr/local/bin/ipmonitor/
+sudo chmod a+x monitorip.sh
+
+sudo chmod a+x action_16up
+sudo chmod a+x action_17up
+sudo chmod a+x action_21up
+
+# @reboot /usr/local/bin/ipmonitor/monitorip.sh -u /usr/local/bin/ipmonitor/action_16up -e 192.168.0.16
+
+## @reboot /usr/local/bin/ipmonitor/monitorip.sh -u /usr/local/bin/ipmonitor/action_17up -e 192.168.0.17
+
+# @reboot /usr/local/bin/ipmonitor/monitorip.sh -u /usr/local/bin/ipmonitor/action_21up -e 192.168.0.21

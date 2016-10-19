@@ -1,0 +1,11 @@
+#!/bin/bash
+set -v
+# chmod a+x
+# mplayer /home/osmc/intruder.mp3
+#mplayer /usr/local/bin/monitorip/intruder.mp3
+
+curl http://192.168.0.33/relay/on
+sleep 10s
+xbmc-send -a "PlayMedia(/usr/local/bin/ipmonitor/intruder.mp3)"
+sleep 10s
+curl http://192.168.0.33/relay/off
